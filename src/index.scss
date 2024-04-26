@@ -1,0 +1,61 @@
+// colors
+$primary-color: #f2fcff;
+$secondary-color: #ffffff;
+$tertiary-color: #358ada;
+$additional-color: #dfdfdf;
+$font-primary-color: #676975;
+$font-secondary-color: #8f9199;
+
+// font-weight
+$font-regular: 400;
+$font-medium: 500;
+$font-bold: 700;
+
+// font-family
+$font-family: 'Noto Sans JP', sans-serif;
+
+@mixin app-grid-item($grid-column) {
+  grid-column: $grid-column;
+
+  padding: 16px;
+  border-radius: 6px;
+  background-color: $secondary-color;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@mixin settings-flex-item() {
+  display: flex;
+
+  gap: 14px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  .heading {
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: $font-family;
+  font-weight: $font-regular;
+  line-height: 1.2;
+  color: $font-primary-color;
+  background-color: $primary-color;
+}
+
+ul {
+  list-style: none;
+}

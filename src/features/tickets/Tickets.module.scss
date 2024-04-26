@@ -1,0 +1,15 @@
+@use '../../index.scss';
+
+.tickets {
+  @include index.app-grid-item($grid-column: 2 / span 3);
+  padding: 0;
+  padding-bottom: 24px;
+
+  background-color: index.$primary-color;
+  box-shadow: none;
+
+  display: flex;
+
+  gap: 24px;
+  flex-direction: column;
+}

@@ -1,0 +1,32 @@
+@use './../../../index.scss';
+
+.currency {
+  @include index.settings-flex-item();
+  padding: 0 16px;
+
+  .buttonGroup {
+    .button {
+      font-size: 16px;
+      font-family: index.$font-family;
+      color: index.$tertiary-color;
+      border: 1px solid index.$secondary-color;
+      background-color: index.$secondary-color;
+    }
+  
+    .button:nth-child(2) {
+      border-left-color: index.$additional-color;
+      border-right-color: index.$additional-color;
+    }
+  
+    .button:hover {
+      border-color: index.$tertiary-color;
+      background-color: index.$primary-color;
+    }
+  
+    .button.active {
+      color: index.$secondary-color;
+      border-color: index.$tertiary-color;
+      background-color: index.$tertiary-color;
+    }
+  }
+}

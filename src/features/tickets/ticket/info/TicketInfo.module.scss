@@ -1,0 +1,35 @@
+@use '../../../../index.scss';
+
+.ticketInfo {
+  display: flex;
+
+  gap: 4px;
+  flex-direction: column;
+
+  .time {
+    font-size: 32px;
+    font-weight: index.$font-medium;
+    padding-bottom: 4px;
+  }
+
+  .city,
+  .date {
+    font-size: 14px;
+  }
+
+  .city {
+    font-weight: index.$font-medium;
+  }
+
+  .date {
+    color: index.$font-secondary-color;
+  }
+}
+
+.alignStart {
+  align-items: flex-start;
+}
+
+.alignEnd {
+  align-items: flex-end;
+}

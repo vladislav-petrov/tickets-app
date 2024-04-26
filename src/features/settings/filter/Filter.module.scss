@@ -1,0 +1,99 @@
+@use '../../../index.scss';
+
+.filter {
+  @include index.settings-flex-item();
+
+  .heading {
+    padding: 0 16px;
+  }
+
+  .list {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    .listItem {
+      padding: 4px 16px;
+      line-height: 1.8;
+
+      display: flex;
+
+      flex-direction: row;
+      justify-content: space-between;
+
+      .label {
+        cursor: pointer;
+
+        display: flex;
+
+        gap: 10px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        .checkbox {
+          appearance: none;
+
+          width: 24px;
+          height: 24px;
+          border-radius: 4px;
+          border: 1px solid index.$tertiary-color;
+          outline: none;
+          cursor: pointer;
+        }
+
+        .checkbox:hover {
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .checkbox.checked {
+          background-color: index.$primary-color;
+          position: relative;
+        }
+
+        .checkbox.checked::before {
+          position: absolute;
+          left: 6px;
+          top: 1px;
+
+          content: '';
+          display: inline-block;
+
+          transform: rotate(45deg);
+          height: 12px;
+          width: 6px;
+          border-bottom: 3px solid index.$tertiary-color;
+          border-right: 3px solid index.$tertiary-color;
+        }
+      }
+
+      .buttonOnly {
+        opacity: 0;
+        pointer-events: none;
+
+        border: none;
+        background: none;
+
+        font-size: 14px;
+        color: index.$tertiary-color;
+        text-transform: uppercase;
+      }
+
+      .buttonOnly:hover {
+        font-weight: index.$font-medium;
+        cursor: pointer;
+      }
+    }
+
+    .listItem:hover {
+      background-color: index.$primary-color;
+    }
+
+    .listItem:hover .buttonOnly {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}

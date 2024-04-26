@@ -1,0 +1,14 @@
+.header {
+  grid-column: 1 / span 3;
+
+  display: flex;
+
+  justify-content: center;
+
+  margin-top: 40px;
+}
+
+.logo {
+  width: 128px;
+  height: 128px;
+}

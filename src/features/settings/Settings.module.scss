@@ -1,0 +1,17 @@
+@use './../../index.scss';
+
+.settings {
+  @include index.app-grid-item($grid-column: 1);
+  padding: 16px 0;
+  height: fit-content;
+
+  display: flex;
+
+  gap: 28px;
+  flex-direction: column;
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}

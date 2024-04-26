@@ -1,0 +1,12 @@
+@use './index.scss';
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 2fr 5fr;
+  column-gap: 24px;
+  row-gap: 48px;
+}
